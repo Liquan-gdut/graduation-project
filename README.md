@@ -1,39 +1,44 @@
-# icity
+# 京东城市管网
 
-#### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+## todo
+- [ ] categoryId 新闻类型主键 icity.get('/article/list/data')
+  - [x] 不需要 categoryId 是什么
+  - [x] 暂时没有 缺少浏览量、访问量
+  - 新闻需要几张图片
 
-#### 软件架构
-软件架构说明
+## Build Setup
 
+``` bash
+git clone http://git.jd.com/web-uc/icity.git
+cd icity
 
-#### 安装教程
+# install dependencies
+npm install
 
-1. xxxx
-2. xxxx
-3. xxxx
+# serve with hot reload at localhost:80
+npm run dev
 
-#### 使用说明
+# build for production with minification
+npm run build
 
-1. xxxx
-2. xxxx
-3. xxxx
+# build for production and view the bundle analyzer report
+npm run build --report
+```
 
-#### 参与贡献
+## git流程
+### 分支介绍
+- master 生产分支
+- integration 测试分支
+- dev 开发分支
+- <feature> dev 上切出来的各个功能分支
 
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [http://git.mydoc.io/](http://git.mydoc.io/)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+### 开发流程
+- `git checkout dev`
+- `git checkout -b <feature>` 从dev 上切 feature 分支出来开发某个功能
+- `git checkout dev && git merge --no-ff <feature>` 开发完毕合并到dev分支
+- `git push origin dev`
+- 提交merge request， 从 dev 分支 merge 到integration 分支；
+- 代码审查， 接受merge request； 提测
+- 测试通过， 提交merge request， 从 integration 分支 merge 到 master 分支；
+- 接受merge request， 验证预发布环境是否正常
+- 手动触发上线流程

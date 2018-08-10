@@ -1,0 +1,261 @@
+@import '@/mixins.styl';
+
+.icityIndex {
+  @include full-width;  color: #fff;
+
+  .clearfix:before, .clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .content {
+    .header {
+      position: relative;
+      height: 50rem;
+      width: 120rem;
+      background-color: #12213C;
+    }
+
+  /*blinking“闪烁”动画效果*/
+  @keyframes blinking {
+    0%   {opacity: 0.2;}
+    100% {opacity: 1;}
+  }
+
+  @-moz-keyframes blinking /* Firefox */ {
+    0%   {opacity: 0.2;}
+    100% {opacity: 1;}
+  }
+
+  @-webkit-keyframes blinking /* Safari 和 Chrome */
+  {
+    0%   {opacity: 0.2;}
+    100% {opacity: 1;}
+  }
+
+  @-o-keyframes blinking /* Opera */ {
+    0%   {opacity: 0.2;}
+    100% {opacity: 1;}
+  }
+
+    .banner {
+      .banner_img{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .blink {
+        animation: blinking 0.7s linear 1s infinite alternate;
+        /* Firefox: */
+        -moz-animation: blinking 0.7s linear 1s infinite alternate;
+        /* Safari 和 Chrome: */
+        -webkit-animation: blinking 0.7s linear 1s infinite alternate;
+        /* Opera: */
+        -o-animation: blinking 0.7s linear 1s infinite alternate;
+      }
+
+      .banner-title {
+        position: absolute;
+        top: 14rem;
+        left: 22.5rem;
+        text-align: left;
+
+        .headline {
+          font-size: 3.5rem;
+          font-weight: bold;
+        }
+
+        .subtitle {
+          line-height: 2rem;
+          opacity: 0.7;
+        }
+
+        .desc {
+          font-size: 18px;
+          color: #dedada;
+          font-weight: normal;
+        }
+      }
+    }
+
+    // /* 幻灯片容器 */
+        // .slideshow-container {
+        //   .mySlides {
+        //     display: none;
+        //     position: absolute; //  此处相对于body布局
+        //     top: 0;
+        //     left: 0;
+        //   }
+        //   /* 下一张 & 上一张 按钮 */
+        //   .prev, .next {
+        //     cursor: pointer;
+        //     position: absolute;
+        //     top: 50%;
+        //     width: auto;
+        //     margin-top: -22px;
+        //     padding: 16px;
+        //     color: white;
+        //     font-weight: bold;
+        //     font-size: 18px;
+        //     transition: 0.6s ease;
+        //     border-radius: 0 3px 3px 0;
+        //   }
+        //   /* 定位 "下一张" 按钮靠右 */
+        //   .next {
+        //     right: 0;
+        //     border-radius: 3px 0 0 3px;
+        //   }
+        //       /* On hover, add a black background color with a little bit see-through */
+        //   .prev:hover, .next:hover {
+        //     background-color: rgba(0,0,0,0.8);
+        //   }
+        //   /* 标记符号 */
+        //   .dot {
+        //     cursor:pointer;
+        //     height: 13px;
+        //     width: 13px;
+        //     margin: 0 2px;
+        //     background-color: #bbb;
+        //     border-radius: 50%;
+        //     display: inline-block;
+        //     transition: background-color 0.6s ease;
+        //   }
+        //   .active, .dot:hover {
+        //     background-color: #717171;
+        //   }
+        //   /* 淡出动画 */
+        //   .fade {
+        //     -webkit-animation-name: fade;
+        //     -webkit-animation-duration: 1.5s;
+        //     animation-name: fade;
+        //     animation-duration: 1.5s;
+        //   }
+        //   @-webkit-keyframes fade {
+        //     from {opacity: .4}
+        //     to {opacity: 1}
+        //   }
+        //   @keyframes fade {
+        //     from {opacity: .4}
+        //     to {opacity: 1}
+        //   }
+        // }
+
+
+    section.advantage {
+      height: 50rem;
+      width: 120rem;
+      background-color: #FFF;
+      color: #333;
+
+      .content-box {
+        width: 66.75rem;
+        height: 35.75rem;
+        margin: 3.45rem auto 4.87rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+
+        .col {
+          flex-basis: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          .icon {
+            height: 6.62rem;
+            width: 100%;
+            position: relative;
+
+            img {
+              width: 6.62rem;
+              height: 100%;
+              margin-left: -3.31rem;
+            }
+
+            .icon-01 {
+              z-index: 1;
+              position: absolute;
+              left: 50%;
+            }
+
+            .icon-02 {
+              z-index: 2;
+              position: absolute;
+              left: 50%;
+            }
+          }
+
+          .icon-test { // “我们优势”：小图标动画效果
+            height: 6.62rem;
+            width: 6.62rem;
+            transition: All 0.4s ease-in-out;
+            -webkit-transition: All 0.4s ease-in-out;
+            -moz-transition: All 0.4s ease-in-out;
+            -o-transition: All 0.4s ease-in-out;
+          }
+
+          .icon-test:hover {
+            transform: rotate(360deg) scale(1.1);
+            -webkit-transform: rotate(360deg) scale(1.1);
+            -moz-transform: rotate(360deg) scale(1.1);
+            -o-transform: rotate(360deg) scale(1.1);
+            -ms-transform: rotate(360deg) scale(1.1);
+          }
+
+          // .icon:nth-child(1) .icon-01:hover {
+          // transform:rotate(360deg);
+          // -webkit-transform:rotate(360deg);
+          // -moz-transform:rotate(360deg);
+          // -o-transform:rotate(360deg);
+          // -ms-transform:rotate(360deg);
+          // }
+          .item-title {
+            margin: 1rem auto;
+            font-family: PingFangSC-Regular;
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: #4D4D4D;
+            letter-spacing: 0.1rem;
+          }
+
+          .text {
+            font-family: FZLTHK--GBK1-0;
+            font-size: 1rem;
+            color: #666666;
+            letter-spacing: 0 0.5rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+
+    section.map {
+      height: 50rem;
+      width: 120rem;
+      background-color: #F7F8FA;
+    }
+
+    section.connect-us {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 18.75rem;
+      width: 120rem;
+      background: #4071CE url('../assets/home/home-connect-us.png') no-repeat center 0;
+      background-size: 100%;
+      letter-spacing: 0.2rem;
+      color: #fff;
+      z-index: 1;
+
+      .connect-content {
+        .connect-title {
+          font-size: 2rem;
+        }
+
+        .email {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

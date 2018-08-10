@@ -1,0 +1,111 @@
+@import "@/mixins.styl";
+.business-scenario{
+  @include full-width;
+  text-align: left;
+  background: url("../assets/BsBg.png") no-repeat;
+  .header{
+    position:relative;
+    color: #ffffff;
+    .clearfix:before,.clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .clearfix {
+      zoom: 1;
+    }
+    width: 1200px;
+    margin:0 auto;
+    //background-color: rgba(255,255,255,0.1);
+    padding-top:40px;
+
+    img{
+      position:absolute;
+      left: 645px;
+      top: 91px;
+    }
+    .title{
+      padding:200px 0 270px 64px;
+      .headline{
+        font-size: 53px;
+        margin:0;
+      }
+      .subtitle{
+        color: #dedfe2;
+        font-size:20px;
+      }
+    }
+  }
+
+  .main-bg-1 {
+    background: url("~/BsBg1.png") no-repeat;
+  }
+  .main-bg-2 {
+    background: url("~/BsBg2.png") no-repeat;
+  }
+  .main-bg-3 {
+    background: url("~/BsBg3.png") no-repeat;
+  }
+  .main-bg-4 {
+     background: url("~/BsBg4.png") no-repeat;
+   }
+  .main-bg-5 {
+    background: url("~/BsBg5.png") no-repeat;
+  }
+  .main-bg-6 {
+    background: url("~/BsBg6.png") no-repeat;
+  }
+
+  .main{
+    width:100%;
+    background-size: 100% 100%;
+    text-align :center;
+    padding: 60px 0;
+    .main-title {
+      color: #dedfe2;
+      font-size:38px;
+    }
+    .main-subtitle{
+      color: #84888f;
+      font-size: 14px;
+    }
+    .project-wraper{
+      width: 1200px;
+      margin: 60px auto 0;
+      overflow: hidden;
+    }
+    .project {
+      width: 280px;
+      text-align: left;
+      display: inline-block;
+      margin-right: 40px;
+      vertical-align: top;
+      transition: transform .3s ease;
+    }
+    .project:hover{
+      transform: scale(1.2);
+    }
+    .project-active:hover{
+      cursor: pointer;
+    }
+    .project:last-child {
+      margin-right: 0;
+    }
+    .project-img{
+      width: 280px;
+      height: 200px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .project-title {
+      margin: 15px 0 5px 0;
+      color: #FFFFFF;
+    }
+    .project-subtitle {
+      font-size: 14px;
+      color: rgba(255, 255, 255, .5);
+    }
+  }
+  .footer {
+    margin-left: 360px;
+  }
+}
