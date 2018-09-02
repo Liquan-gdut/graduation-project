@@ -1,0 +1,12 @@
+@font-face{
+  font-family: 'SourceHanSansCN-Regular';
+  src : url('https://uc-icity.oss.cn-north-1.jcloudcs.com/1c420a33d76f4b6a8ddfd736e22ff653.otf');
+}
+@font-face{
+  font-family: 'SourceHanSansCN-Normal';
+  src : url('https://uc-icity.oss.cn-north-1.jcloudcs.com/3e9fe4d3029b47f9af640233f0193aae.otf');
+}
+@font-face{
+  font-family: 'SourceHanSansCN-Medium';
+  src : url('https://uc-icity.oss.cn-north-1.jcloudcs.com/77129220aecd400b9247172b24711afe.otf');
+}

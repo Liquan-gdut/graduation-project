@@ -1,261 +1,225 @@
-@import '@/mixins.styl';
+@import '../mixins.styl';
 
-.icityIndex {
-  @include full-width;  color: #fff;
+.title {
+  font-family: SourceHanSansCN-Medium;
+  font-size: 34px;
+  color: #333333;
+  text-align: center;
+  padding-top: 50px;
+}
 
-  .clearfix:before, .clearfix:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+section.advantage {
+  background: #fafafa;
+  width: 100%;
+  height: 800px;
 
-  .content {
-    .header {
+  .content-box {
+    position: relative;
+    width: 1200px;
+    height: 35.75rem;
+    margin: 50px auto;
+
+    .item {
+      position: absolute;
+    }
+
+    .item1 {
+      top: 0;
+      left: 0;
+    }
+
+    .item2 {
+      top: 0;
+      right: 0;
+    }
+
+    .item3{
+      bottom: 0;
+      left: 0;
+    }
+
+    .item4{
+      bottom: 0;
+      right: 0;
+    }
+
+    .icon {
+      height: 106px;
+      width: 106px;
       position: relative;
-      height: 50rem;
-      width: 120rem;
-      background-color: #12213C;
-    }
+      margin: 0 auto;
 
-  /*blinking“闪烁”动画效果*/
-  @keyframes blinking {
-    0%   {opacity: 0.2;}
-    100% {opacity: 1;}
-  }
+      img {
+        width: 6.62rem;
+        height: 100%;
+        margin-left: -3.31rem;
+      }
 
-  @-moz-keyframes blinking /* Firefox */ {
-    0%   {opacity: 0.2;}
-    100% {opacity: 1;}
-  }
-
-  @-webkit-keyframes blinking /* Safari 和 Chrome */
-  {
-    0%   {opacity: 0.2;}
-    100% {opacity: 1;}
-  }
-
-  @-o-keyframes blinking /* Opera */ {
-    0%   {opacity: 0.2;}
-    100% {opacity: 1;}
-  }
-
-    .banner {
-      .banner_img{
+      .icon-01 {
+        z-index: 1;
         position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-      .blink {
-        animation: blinking 0.7s linear 1s infinite alternate;
-        /* Firefox: */
-        -moz-animation: blinking 0.7s linear 1s infinite alternate;
-        /* Safari 和 Chrome: */
-        -webkit-animation: blinking 0.7s linear 1s infinite alternate;
-        /* Opera: */
-        -o-animation: blinking 0.7s linear 1s infinite alternate;
+        left: 50%;
       }
 
-      .banner-title {
+      .icon-02 {
+        z-index: 2;
         position: absolute;
-        top: 14rem;
-        left: 22.5rem;
-        text-align: left;
+        left: 50%;
+      }
 
-        .headline {
-          font-size: 3.5rem;
-          font-weight: bold;
-        }
-
-        .subtitle {
-          line-height: 2rem;
-          opacity: 0.7;
-        }
-
-        .desc {
-          font-size: 18px;
-          color: #dedada;
-          font-weight: normal;
-        }
+      .technology2 {
+        width: 85px;
+        height: 85px;
+        position: relative;
+        left: 26px;
+        top: 11px;
+      }
+      .experience2 {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        left: 27px;
+        top: 17px;
+      }
+      .brand2 {
+        width: 48px;
+        height: 90px;
+        position: relative;
+        left: 27px;
       }
     }
 
-    // /* 幻灯片容器 */
-        // .slideshow-container {
-        //   .mySlides {
-        //     display: none;
-        //     position: absolute; //  此处相对于body布局
-        //     top: 0;
-        //     left: 0;
-        //   }
-        //   /* 下一张 & 上一张 按钮 */
-        //   .prev, .next {
-        //     cursor: pointer;
-        //     position: absolute;
-        //     top: 50%;
-        //     width: auto;
-        //     margin-top: -22px;
-        //     padding: 16px;
-        //     color: white;
-        //     font-weight: bold;
-        //     font-size: 18px;
-        //     transition: 0.6s ease;
-        //     border-radius: 0 3px 3px 0;
-        //   }
-        //   /* 定位 "下一张" 按钮靠右 */
-        //   .next {
-        //     right: 0;
-        //     border-radius: 3px 0 0 3px;
-        //   }
-        //       /* On hover, add a black background color with a little bit see-through */
-        //   .prev:hover, .next:hover {
-        //     background-color: rgba(0,0,0,0.8);
-        //   }
-        //   /* 标记符号 */
-        //   .dot {
-        //     cursor:pointer;
-        //     height: 13px;
-        //     width: 13px;
-        //     margin: 0 2px;
-        //     background-color: #bbb;
-        //     border-radius: 50%;
-        //     display: inline-block;
-        //     transition: background-color 0.6s ease;
-        //   }
-        //   .active, .dot:hover {
-        //     background-color: #717171;
-        //   }
-        //   /* 淡出动画 */
-        //   .fade {
-        //     -webkit-animation-name: fade;
-        //     -webkit-animation-duration: 1.5s;
-        //     animation-name: fade;
-        //     animation-duration: 1.5s;
-        //   }
-        //   @-webkit-keyframes fade {
-        //     from {opacity: .4}
-        //     to {opacity: 1}
-        //   }
-        //   @keyframes fade {
-        //     from {opacity: .4}
-        //     to {opacity: 1}
-        //   }
-        // }
+    /* wheel-rotate动画效果 */
+    @keyframes wheel-rotate {
+      0% {
+        transform: rotate(0);
+      }
 
-
-    section.advantage {
-      height: 50rem;
-      width: 120rem;
-      background-color: #FFF;
-      color: #333;
-
-      .content-box {
-        width: 66.75rem;
-        height: 35.75rem;
-        margin: 3.45rem auto 4.87rem auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-
-        .col {
-          flex-basis: 100%;
-          display: flex;
-          justify-content: space-between;
-
-          .icon {
-            height: 6.62rem;
-            width: 100%;
-            position: relative;
-
-            img {
-              width: 6.62rem;
-              height: 100%;
-              margin-left: -3.31rem;
-            }
-
-            .icon-01 {
-              z-index: 1;
-              position: absolute;
-              left: 50%;
-            }
-
-            .icon-02 {
-              z-index: 2;
-              position: absolute;
-              left: 50%;
-            }
-          }
-
-          .icon-test { // “我们优势”：小图标动画效果
-            height: 6.62rem;
-            width: 6.62rem;
-            transition: All 0.4s ease-in-out;
-            -webkit-transition: All 0.4s ease-in-out;
-            -moz-transition: All 0.4s ease-in-out;
-            -o-transition: All 0.4s ease-in-out;
-          }
-
-          .icon-test:hover {
-            transform: rotate(360deg) scale(1.1);
-            -webkit-transform: rotate(360deg) scale(1.1);
-            -moz-transform: rotate(360deg) scale(1.1);
-            -o-transform: rotate(360deg) scale(1.1);
-            -ms-transform: rotate(360deg) scale(1.1);
-          }
-
-          // .icon:nth-child(1) .icon-01:hover {
-          // transform:rotate(360deg);
-          // -webkit-transform:rotate(360deg);
-          // -moz-transform:rotate(360deg);
-          // -o-transform:rotate(360deg);
-          // -ms-transform:rotate(360deg);
-          // }
-          .item-title {
-            margin: 1rem auto;
-            font-family: PingFangSC-Regular;
-            font-size: 1.5rem;
-            font-weight: normal;
-            color: #4D4D4D;
-            letter-spacing: 0.1rem;
-          }
-
-          .text {
-            font-family: FZLTHK--GBK1-0;
-            font-size: 1rem;
-            color: #666666;
-            letter-spacing: 0 0.5rem;
-            line-height: 2rem;
-          }
-        }
+      100% {
+        transform: rotate(180deg);
       }
     }
 
-    section.map {
-      height: 50rem;
-      width: 120rem;
-      background-color: #F7F8FA;
+    .icon-technology:hover .technology1 {
+      animation: wheel-rotate 0.3s linear 0s alternate;
     }
 
-    section.connect-us {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 18.75rem;
-      width: 120rem;
-      background: #4071CE url('../assets/home/home-connect-us.png') no-repeat center 0;
-      background-size: 100%;
-      letter-spacing: 0.2rem;
-      color: #fff;
-      z-index: 1;
-
-      .connect-content {
-        .connect-title {
-          font-size: 2rem;
-        }
-
-        .email {
-          font-size: 1.5rem;
-        }
+    /* star-scale动画效果 */
+    @keyframes star-scale {
+      0% {
+        transform: scale(1, 1);
       }
+
+      50% {
+        transform: scale(0.5, 0.5);
+      }
+
+      100% {
+        transform: scale(1, 1);
+      }
+    }
+
+    .experience2:hover {
+      animation: star-scale 0.9s linear 0s alternate;
+    }
+
+    /* data动画效果 */
+    .data-2 {
+      display: none;
+    }
+
+    .data:hover .data-1 {
+      display: none;
+    }
+
+    .data:hover .data-2 {
+      display: block;
+    }
+
+    /* brand-scale动画效果 */
+    @keyframes brand-scale {
+      0% {
+        top: 0;
+        transform: scale(1, 1);
+      }
+
+      25% {
+        top: 10%;
+        transform: scale(0.75, 0.75);
+      }
+
+      50% {
+        top: 20%;
+        transform: scale(0.5, 0.5);
+      }
+
+      75% {
+        top: 10%;
+        transform: scale(0.75, 0.75);
+      }
+
+      100% {
+        top: 0;
+        transform: scale(1, 1);
+      }
+    }
+
+    .brand2:hover {
+      animation: brand-scale 1.1s linear 0s alternate;
+    }
+
+    .item-title {
+      margin: 1rem auto;
+      font-family: SourceHanSansCN-Regular;
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #4D4D4D;
+      letter-spacing: 0.1rem;
+    }
+
+    .text {
+      font-family: FZLTHK--GBK1-0;
+      font-size: 1rem;
+      color: #666666;
+      letter-spacing: 0 0.5rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+section.connect-us {
+  position: relative;
+  height: 18.75rem;
+  width: 100%;
+  background: url('../assets/home/home-connect-us.png') no-repeat center 0;
+  background-size: 100%;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  z-index: 1;
+
+  .bg-color {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #4071CE;
+    opacity: 0.68;
+  }
+
+  .connect-content {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    .connect-title {
+      font-family:SourceHanSansCN-Medium;
+      font-size: 2rem;
+    }
+
+    .email {
+      font-family:PingFangSC-Regular;
+      font-size: 1.5rem;
     }
   }
 }

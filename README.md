@@ -1,10 +1,7 @@
 # 京东城市管网
 
 ## todo
-- [ ] categoryId 新闻类型主键 icity.get('/article/list/data')
-  - [x] 不需要 categoryId 是什么
-  - [x] 暂时没有 缺少浏览量、访问量
-  - 新闻需要几张图片
+- [ ] compnayProfile.vue line59 破折号
 
 ## Build Setup
 
@@ -42,3 +39,8 @@ npm run build --report
 - 测试通过， 提交merge request， 从 integration 分支 merge 到 master 分支；
 - 接受merge request， 验证预发布环境是否正常
 - 手动触发上线流程
+
+## 访问路径
+- 测试环境： `http://101.124.15.81:8080/icity.jd.com/`
+- 预发布环境： `http://101.124.15.81:8001`
+- 生产环境： `https://icity.jd.com`

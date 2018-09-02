@@ -1,0 +1,10 @@
+// d3 按需引入
+export { extent, sum, max, range } from 'd3-array'
+export {select} from 'd3-selection'
+export { scaleLinear, scaleBand, scaleOrdinal } from 'd3-scale'
+export {geoCentroid, geoMercator, geoPath} from 'd3-geo'
+export { pie, arc } from 'd3-shape'
+export { format } from 'd3-format'
+export { axisBottom, axisLeft } from 'd3-axis'
+export { schemeCategory10 } from 'd3-scale-chromatic'
+export { transition } from 'd3-transition'

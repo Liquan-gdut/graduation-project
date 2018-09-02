@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="83px" height="106px" viewBox="0 0 83 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_pinpai_home_part01</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="83.332105%" y1="112.702683%" x2="21.406987%" y2="-6.5521816%" id="linearGradient-1">
+            <stop stop-color="#4285F4" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="credit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home" transform="translate(-1226.000000, -2081.000000)" stroke="#377EE8" stroke-width="1.6">
+            <g id="youshi" transform="translate(0.000000, 1600.000000)">
+                <g id="Group-54-Copy" transform="translate(1227.000000, 482.000000)">
+                    <g id="ic_pinpai_home_part01">
+                        <path d="M0,0 L80.9552993,0 L80.9552993,42.9228452 C80.9552993,85.1520381 42.420073,104.210826 40.4776497,104.210826 C38.5352264,104.210826 0,84.6307326 0,42.9228452 L0,0 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                        <path d="M11.0875329,10.7352919 L69.9860864,10.7352919 L69.9860864,46.0729646 C69.9860864,75.6298957 41.8662198,92.1442629 40.5,92.1442629 C39.1337802,92.1442629 11.0875329,75.2650252 11.0875329,46.0729646 L11.0875329,10.7352919 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

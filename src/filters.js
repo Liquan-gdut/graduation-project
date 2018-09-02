@@ -8,61 +8,49 @@ export const ellipsis = (word, length) => {
  * @param {string|int} raw  传入的日期字符串或timestamp
  * @param {string} fmt  格式 [YYYY|YY]-MM-DD HH:mm:ss
  */
-
-const addZero = (date) => {
-  let temp = '00' + date.toString()
-  return temp.slice(temp.length - 2, temp.length + 1)
-}
-
 export const timeFormate = (raw, fmt) => {
-  // todo
-  /**
-   * test case:
-   *  input raw=2018-08-10 fmt='YYYY/MM/DD'
-   *  output 2018/08/10
-   *
-   *  input raw=1533212638286 fmt='MM/DD/YY HH:mm:ss'
-   *  output 08/02/18 20:23:58
-   */
+  raw = raw.replace(/-/g, '/') // 兼容性处理：Safari无法将“YY-MM-DD”转成Date格式，可将全部“-”替换成“/”
   const date = new Date(raw)
-  let dateFmt = fmt.toString()
-  let newDate = {
-    year: date.getFullYear(),
-    month: addZero(date.getMonth() + 1), //  注意：月份是从“0”开始计算！
-    day: addZero(date.getDate()),
-    hour: addZero(date.getHours()),
-    minu: addZero(date.getMinutes()),
-    secon: addZero(date.getSeconds())
-  }
-  if (dateFmt.match(/y+/gi)) {
-    if (dateFmt.match(/y+/gi)[0].length === 4) {
-      dateFmt = dateFmt.replace(/y+/gi, newDate.year.toString())
-    } else {
-      dateFmt = dateFmt.replace(/y+/gi, newDate.year.toString().slice(2, 4))
-    }
-  }
-  if (dateFmt.search(/m+/gi) >= 0) {
-    dateFmt = dateFmt.replace(/m+/i, newDate.month)
-  }
-  if (dateFmt.search(/m+/gi) >= 0) {
-    dateFmt = dateFmt.replace(/m+/i, newDate.minu)
-  }
-  if (dateFmt.search(/d+/gi) >= 0) {
-    dateFmt = dateFmt.replace(/d+/gi, newDate.day)
-  }
-  if (dateFmt.search(/h+/gi) >= 0) {
-    dateFmt = dateFmt.replace(/h+/gi, newDate.hour)
-  }
-  if (dateFmt.search(/s+/gi) >= 0) {
-    dateFmt = dateFmt.replace(/s+/gi, newDate.secon)
-  }
-  return dateFmt
+  if (date.toString() === 'Invalid Date') {
+    return fmt
+  } // 参数校验
+  date.setHours(date.getHours() + 8)
+  const reg = /(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/
+  const [, YYYY, MM, DD, HH, mm, ss] = date.toISOString().match(reg)
+  return fmt.replace('YYYY', YYYY)
+    .replace('MM', MM)
+    .replace('DD', DD)
+    .replace('HH', HH)
+    .replace('mm', mm)
+    .replace('ss', ss)
 }
-// /**
-//  * @param {运动位置计算公式} lineFormula
-//  * @param {直线两端点} x1,y1,x2,y2
-//  * @param {返回结果} 下一点的y坐标
-//  */
-// export const lineFormula = function (x1, y1, x2, y2, x) {
-//   return (x - x1) * (y2 - y1) / (x2 - x1) + y1
+
+// export const partnerIcon = (typeName, active) => {
+//   return require(`./assets/icon/${typeName.toLocaleLowerCase()}${active ? '-active' : ''}.svg`)
+// }
+
+// export default function (Vue) {
+//   Vue.filter('timeFormate', function (raw, fmt) {
+//     raw = raw.replace(/-/g, '/') // 兼容性处理：Safari无法将“YY-MM-DD”转成Date格式，可将全部“-”替换成“/”
+//     const date = new Date(raw)
+//     if (date.toString() === 'Invalid Date') {
+//       return fmt
+//     } // 参数校验
+//     date.setHours(date.getHours() + 8)
+//     const reg = /(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/
+//     const [, YYYY, MM, DD, HH, mm, ss] = date.toISOString().match(reg)
+//     return fmt.replace('YYYY', YYYY)
+//       .replace('MM', MM)
+//       .replace('DD', DD)
+//       .replace('HH', HH)
+//       .replace('mm', mm)
+//       .replace('ss', ss)
+//   })
+//   Vue.filter('ellipsis', function (word, length) {
+//     if (!word) return word
+//     return word.length > length ? word.slice(0, length) + '...' : word
+//   })
+//   Vue.filter('partnerIcon', function (typeName, active) {
+//     return require(`./assets/icon/${typeName.toLocaleLowerCase()}${active ? '-active' : ''}.svg`)
+//   })
 // }

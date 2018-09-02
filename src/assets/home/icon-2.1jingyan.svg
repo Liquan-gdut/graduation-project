@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="108px" viewBox="0 0 108 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_jingyan_home_part01</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="83.332105%" y1="112.702683%" x2="21.406987%" y2="-6.5521816%" id="linearGradient-1">
+            <stop stop-color="#4285F4" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.109884511" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="credit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home" transform="translate(-1214.000000, -1749.000000)" stroke="#377EE8" stroke-width="1.6">
+            <g id="youshi" transform="translate(0.000000, 1600.000000)">
+                <g id="Group-53-Copy" transform="translate(1215.000000, 150.000000)">
+                    <g id="ic_jingyan_home_part01">
+                        <circle id="Oval-6" fill="#FFFFFF" cx="53" cy="53" r="53"></circle>
+                        <circle id="Oval-6" fill="url(#linearGradient-1)" cx="53" cy="53" r="42.5606061"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -8,7 +8,7 @@ import {domains} from '@/config'
 
 const icity = axios.create({
   baseURL: domains.icity,
-  timeout: 3000,
+  timeout: 5000,
   // `transformResponse` allows changes to the response data to be made before
   // it is passed to then/catch
   // transformResponse: [function (data) {
@@ -16,8 +16,8 @@ const icity = axios.create({
   // }],
 })
 icity.interceptors.response.use(async (response) => {
-  const {data, success} = await response.data
-  if (success) return data
+  const {data, code} = await response.data
+  if (code === 200) return data
   return Promise.reject(response.data)
 }, (error) => {
   console.error('icity request error: ', error)

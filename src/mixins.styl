@@ -1,4 +1,18 @@
+$blue=#4285F4
+
 @mixin full-width {
   width: 100%;
   min-width: 1300px;
+}
+
+@mixin content-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+$set-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }

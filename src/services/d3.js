@@ -1,0 +1,5 @@
+export {geoMercator} from 'd3-geo'
+export {easeLinear} from 'd3-ease'
+export {range} from 'd3-array'
+export {select} from 'd3-selection'
+export {transition} from 'd3-transition'

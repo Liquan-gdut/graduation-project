@@ -1,22 +1,25 @@
 @import "mixins.styl";
 
 html,body,
-h1, h2, h3,
+h1, h2, h3, h4,
 p,
 form,
 ul,
 li,
-a {
+a,
+span {
   margin: 0;
   padding: 0;
   list-style: none;
   border: none;
+  font-weight normal
+}
+html, body {
+  height: 100%;
+  width: 100%;
   font-size:16px;
 }
 
-html, body {
-  overflow: scroll;
-}
 a { color:white; text-decoration:none; }
 a:hover {
   cursor: pointer;
@@ -25,34 +28,29 @@ a:hover {
 
 #app {
   width: 100%;
-  height: 100%;
+  overflow: hidden;
   min-width: 1300px;
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  // color: #2c3e50;
   line-height: 1.5;
-  overflow: scroll;
 }
 
 .content{
-  // padding-top: 40px;
-  // // width: 1200px;
-  // margin: 0 auto;
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .clearfix {
   zoom: 1;
 }
 
-
-// .banner{
-//   @include full-width;
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-// }
+.banner{
+  @include full-width;
+  // background: #eee;
+}
 
 .clear-margin-right {
   margin-right: 0 !important;
@@ -61,3 +59,46 @@ a:hover {
 .hidden {
   display: none;
 }
+.black-text {
+  color: #333333;
+}
+.white-text {
+  color: white;
+}
+
+h2
+  font-family:SourceHanSansCN-Medium;
+  font-size:48px;
+  line-height:71px;
+
+h3
+  font-family:SourceHanSansCN-Medium;
+  font-size:34px;
+  line-height:50px;
+  padding-top: 50px;
+
+h4
+  font-size:24px;
+  line-height:20px;
+
+/*
+* banner 轮播切换样式
+*/
+.tog-box
+  width: auto;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  margin-left: -125px;
+  .tog
+    display: inline-block; // 注意：此处需要设置为“inline-block”，宽高才能生效。
+    width: 64px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    border-bottom: 4px solid rgba(255,255,255,0.3);
+    &:last-child
+      margin-right: 0
+  .tog.active
+    border-color: #ffffff;

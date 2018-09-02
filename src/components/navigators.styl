@@ -1,0 +1,36 @@
+@import "../mixins.styl";
+.logo{
+  width: 120px;
+  height: auto;
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  margin auto 0
+  &:hover{
+    cursor: pointer;
+  }
+}
+.nav-box {
+  width: 100%;
+  min-width: 1300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+
+  z-index: 10;
+  height 60px
+  line-height 60px
+  transition background .3s
+  cursor pointer
+  // nav 悬停在顶部
+  &.hover {
+    position: fixed;
+    background: #2f3844;
+  }
+}
+.header-nav {
+  text-align: right;
+}
