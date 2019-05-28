@@ -4,11 +4,13 @@
  */
 
 import axios from 'axios'
-import {domains} from '@/config'
+import {
+  domains
+} from '@/config'
 
 const icity = axios.create({
   baseURL: domains.icity,
-  timeout: 5000,
+  timeout: 50000,
   // `transformResponse` allows changes to the response data to be made before
   // it is passed to then/catch
   // transformResponse: [function (data) {
@@ -16,7 +18,10 @@ const icity = axios.create({
   // }],
 })
 icity.interceptors.response.use(async (response) => {
-  const {data, code} = await response.data
+  const {
+    data,
+    code
+  } = await response.data
   if (code === 200) return data
   return Promise.reject(response.data)
 }, (error) => {
@@ -25,4 +30,6 @@ icity.interceptors.response.use(async (response) => {
 })
 
 // export default axios
-export {icity}
+export {
+  icity
+}

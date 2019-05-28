@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <navigators></navigators>
+    <common-header></common-header>
     <router-view></router-view>
-    <CommonFooter></CommonFooter>
+    <common-footer></common-footer>
   </div>
 </template>
 
 <script>
-import Navigators from './components/navigators.vue'
-import CommonFooter from './components/CommonFooter.vue'
+import CommonHeader from '@/components/CommonHeader/CommonHeader.vue'
+import CommonFooter from '@/components/CommonFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    CommonFooter, Navigators
+    CommonFooter, CommonHeader
   },
   mounted () {
     this.$store.dispatch('watchDomScroll')

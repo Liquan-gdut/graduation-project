@@ -1,104 +1,53 @@
-@import "mixins.styl";
-
-html,body,
-h1, h2, h3, h4,
-p,
-form,
-ul,
-li,
-a,
-span {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border: none;
+@import 'mixins.styl'
+html, body, h1, h2, h3, h4, p, form, ul, li, a, span
+  margin 0
+  padding 0
+  list-style none
+  border none
   font-weight normal
-}
-html, body {
-  height: 100%;
-  width: 100%;
-  font-size:16px;
-}
-
-a { color:white; text-decoration:none; }
-a:hover {
-  cursor: pointer;
-  color: #fff;
-}
-
-#app {
-  width: 100%;
-  overflow: hidden;
-  min-width: 1300px;
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.content{
-  position: relative;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-.banner{
-  @include full-width;
-  // background: #eee;
-}
-
-.clear-margin-right {
-  margin-right: 0 !important;
-}
-
-.hidden {
-  display: none;
-}
-.black-text {
-  color: #333333;
-}
-.white-text {
-  color: white;
-}
-
-h2
-  font-family:SourceHanSansCN-Medium;
-  font-size:48px;
-  line-height:71px;
-
-h3
-  font-family:SourceHanSansCN-Medium;
-  font-size:34px;
-  line-height:50px;
-  padding-top: 50px;
-
-h4
-  font-size:24px;
-  line-height:20px;
-
-/*
-* banner 轮播切换样式
-*/
-.tog-box
-  width: auto;
-  height: 40px;
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  margin-left: -125px;
-  .tog
-    display: inline-block; // 注意：此处需要设置为“inline-block”，宽高才能生效。
-    width: 64px;
-    height: 30px;
-    margin-right: 20px;
-    cursor: pointer;
-    border-bottom: 4px solid rgba(255,255,255,0.3);
-    &:last-child
-      margin-right: 0
-  .tog.active
-    border-color: #ffffff;
+body
+  margin 0
+  font-family 'Roboto Condensed', sans-serif
+  background #fff
+body a
+  -webkit-transition 0.5s all
+  -moz-transition 0.5s all
+  -o-transition 0.5s all
+  -ms-transition 0.5s all
+  transition 0.5s all
+  text-decoration none
+h1, h2, h3, h4, h5, h6
+  margin 0
+p
+  margin 0
+  font-size 1em
+  color #999
+  line-height 1.8em
+ul, label
+  margin 0
+  padding 0
+body a:hover
+  text-decoration none
+#app
+  width 100%
+  overflow hidden
+  min-width 1300px
+  font-family Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  // text-align center
+  // line-height 1.5
+.welcome, .deals, .card-page, .help, .values, .privacy, .sitemap, .products, .related-products, .login-page, .contact, .about, .faq-w3agile, .wthree-offers, .w3l-services
+  padding 5em 0
+.breadcrumb.breadcrumb1 > li
+  font-size 1.1em
+  font-weight 300
+.breadcrumb.breadcrumb1 li a
+  color #0280e1
+.breadcrumb.breadcrumb1 > .active, .breadcrumb.breadcrumb1 li a:hover
+  color #000
+.breadcrumb.breadcrumb1 > li + li:before
+  content '\f101'
+  font normal normal normal 14px / 1 FontAwesome
+  color #464646
+  padding 0 8px
