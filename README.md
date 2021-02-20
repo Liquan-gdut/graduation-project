@@ -6,8 +6,8 @@
 ## Build Setup
 
 ``` bash
-git clone http://git.jd.com/web-uc/icity.git
-cd icity
+git clone https://github.com/Liquan-gdut/graduation-project.git
+cd graduation-project
 
 # install dependencies
 npm install
@@ -40,7 +40,3 @@ npm run build --report
 - 接受merge request， 验证预发布环境是否正常
 - 手动触发上线流程
 
-## 访问路径
-- 测试环境： `http://101.124.15.81:8080/icity.jd.com/`
-- 预发布环境： `http://101.124.15.81:8001`
-- 生产环境： `https://icity.jd.com`
