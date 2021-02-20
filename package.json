@@ -1,8 +1,8 @@
 {
-  "name": "icity",
+  "name": "graduation-project",
   "version": "2.0.0",
   "description": "urban computing",
-  "author": "siting wang <si_ting123@outlook.com>",
+  "author": "liquan <liquan_gdut.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
